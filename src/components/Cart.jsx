@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
 import PurchaseForm from './PurchaseForm';
+import { useCart } from '../state/CartProvider';
 
 const Cart = () => {
   // TODO - get cart items from context
-  const cartItems = [];
-  const removeFromCart = () => {};
+@@ -8,60 +9,7 @@ const Cart = () => {
   const updateItemQuantity = () => {};
   const getCartTotal = () => {};
 
@@ -63,5 +63,8 @@ const Cart = () => {
     </div>
   );
 };
+  const{cartItems, removeFromCart, getCartTotal, updateItemQuantity } = useCart();
 
 export default Cart;
+  return (
+    <div className="center mw7 mv4"></div>
